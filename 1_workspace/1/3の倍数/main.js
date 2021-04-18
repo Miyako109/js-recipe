@@ -1,11 +1,14 @@
-const number = 24
-
-const gennkiFunction(24) = function(number){
-    for (let n=1; n<=number; n++) {
-      if (n % 3 === 0) {
-        console.log(`${n}!!!!!!!`)
-      } else {
-        console.log(n)
-      }
+const gennkiFunction = function(number) {
+  for (let n = 1; n <= number; n++) {
+    if (n % 15 === 0) {
+      console.log(`${n}FizzBuzz`)
+    } else if (n % 5 === 0) {
+      console.log(n + "Buzz")
+    } else if (n % 3 === 0) {
+      console.log(n + "Fizz")
+    } else {
+      console.log(n)
     }
   }
+}
+gennkiFunction(30)
