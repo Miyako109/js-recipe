@@ -2,18 +2,35 @@
 <html lang="ja">
   <head>
     <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>ElementSample</title>
+    <title>Document</title>
   </head>
   <body>
-    <div id="cards-container">
-      <div class="card" id="primary-card">こんにちは</div>
-      <div class="card">こんばんは</div>
-    </div>
-
-    <script>
-      // JavaScript
-    </script>
+    <p>問題文</p>
+    <p>私の猫の名前は何でしょう</p>
+    <button id="choice1">ミュー</button>
+    <button id="choice2">ポンズ</button>
+    <button id="choice3">プリン</button>
+    <div id="answer"></div>
   </body>
+
+  <script>
+    const Choice1 = document.getElementById("choice1")
+    const Choice2 = document.getElementById("choice2")
+    const Choice3 = document.getElementById("choice3")
+    const Answer = document.getElementById("answer")
+
+    Choice1.onclick = function() {
+      Answer.textContent = "正解！"
+    }
+
+    Choice2.onclick = function() {
+      Answer.textContent = "残念！"
+    }
+
+    Choice3.onclick = function() {
+      Answer.textContent = "残念！"
+    }
+  </script>
 </html>
