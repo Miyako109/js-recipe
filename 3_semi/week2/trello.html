@@ -15,13 +15,18 @@
     <script>
       const memoInput = document.getElementById("memo-input")
       const addbutton = document.getElementById("add-button")
-      const memocontainer = document.getElementById("memo-container")
+      const memoContainer = document.getElementById("memo-container")
+      let memos = []
       addbutton.onclick = function() {
-        const text = memoInput.value
-        const card = document.createElement("div")
-        card.className = "card"
-        card.textContent = text
-        memocontainer.append(card)
+        memos.push(memoInput.value)
+        console.log(memos)
+        memoContainer.innerHTML = ""
+        for (let i = 0; i < memos.length; i++) {
+          const text = memos[i]
+          const div = document.createElement("div")
+          div.textContent = text
+          memoContainer.append(div)
+        }
       }
     </script>
   </body>
