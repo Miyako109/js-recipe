@@ -18,14 +18,21 @@
       const memoContainer = document.getElementById("memo-container")
       let memos = []
       
+      
+     
+      
       if(localStorage.memos){
 
         const memosJson = localStorage.memos
         memos = JSON.parse(memosJson)
-
       }
-      
-      
+
+      // for (let i = 0; i < memos.length; i++) {
+      //     const text = memos[i]
+      //     const div = document.createElement("div")
+      //     div.textContent = text
+      //     memoContainer.append(div)
+    
 
       addbutton.onclick = function() {
         
@@ -36,5 +43,6 @@
         console.log(memos)
       }
     </script>
-  </body>
+  
+    </body>
 </html>
