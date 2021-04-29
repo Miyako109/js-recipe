@@ -1,12 +1,10 @@
-const FizzBuzz = function(number){
-  for(let n = 0; n <= number; n++){
-    if(n % 3 === 0 ||String(n).includes("3")){
-      console.log(n + "!!!!!")
-    }else {
-      console.log(n)
-    }
-  }
-} 
+const display = document.getElementById("display")
+const button = document.getElementById("button")
 
+let count = 0
 
-FizzBuzz(100)
+button.onclick = function(){
+
+count += 1
+display.textContent = count
+}
