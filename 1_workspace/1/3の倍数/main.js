@@ -1,19 +1,25 @@
-const display = document.getElementById("display")
-const minusButton = document.getElementById("minus-button")
-const extraButton = document.getElementById("extra-button")
+const button = document.getElementById("button")
 
 
-let displayNumber = 0
-
-
-minusButton.onclick = function(){
-  const minusNumber = displayNumber-1;
-  displayNumber = minusNumber;
-  display.textContent = displayNumber
+//countの実行内容
+const count = function(number){
+for( let i = 1; i <= number; i++ ){
+  if (i % 3 === 0){
+    console.log(i + "!!!!!!!")
+  }else{
+    console.log(i)
+  }
+}
 }
 
-extraButton.onclick = function(){
-  const extraNumber = displayNumber*2;
-  displayNumber = extraNumber;
-  display.textContent = displayNumber;
+//クリックしたら、intervalを使ってcountを実行
+ 
+
+button.onclick = function(){
+setInterval(count(24), 1000)
 }
+
+
+
+
+
