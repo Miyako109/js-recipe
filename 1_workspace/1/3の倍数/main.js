@@ -1,10 +1,19 @@
 const display = document.getElementById("display")
-const button = document.getElementById("button")
+const minusButton = document.getElementById("minus-button")
+const extraButton = document.getElementById("extra-button")
 
-let count = 0
 
-button.onclick = function(){
+let displayNumber = 0
 
-count += 1
-display.textContent = count
+
+minusButton.onclick = function(){
+  const minusNumber = displayNumber-1;
+  displayNumber = minusNumber;
+  display.textContent = displayNumber
+}
+
+extraButton.onclick = function(){
+  const extraNumber = displayNumber*2;
+  displayNumber = extraNumber;
+  display.textContent = displayNumber;
 }

@@ -5,8 +5,22 @@
 }
 
 .rounded {
+  width: 100px;
+  height: 100px;
+  background-color: black;
   border-radius: 50px;
 }
+
+.tryangle{ 
+  width: 0;
+  height: 0;
+  border-top: solid 50px transparent;
+  border-right: solid 50px transparent;
+  border-bottom: solid 100px  rgb(0, 0, 0);
+  border-left: solid 50px transparent;
+}
+
+
 
 .transition {
   transition: all 1s;

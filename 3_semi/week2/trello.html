@@ -16,10 +16,10 @@
       const memoInput = document.getElementById("memo-input")
       const addbutton = document.getElementById("add-button")
       const memoContainer = document.getElementById("memo-container")
-      let memos = []
+      let memos = []//配列を代入するときは[]
       
       
-     
+     //JSON.perseで解凍、JSON.stringifyで凍結
       
       if(localStorage.memos){
 
@@ -27,22 +27,35 @@
         memos = JSON.parse(memosJson)
       }
 
-      // for (let i = 0; i < memos.length; i++) {
-      //     const text = memos[i]
-      //     const div = document.createElement("div")
-      //     div.textContent = text
-      //     memoContainer.append(div)
+      //lengthは配列の長さ
+      for (let i = 0; i < memos.length; i++) {
+          const text = memos[i]
+          const div = document.createElement("div")
+          div.textContent = text
+          memoContainer.append(div)
+      }
     
+      addbutton.onclick = function(){
+      //pushは配列の最後に値を追加する。
+      memos.push(memoInput.value)
+     localStorage.memos = JSON.stringify(memos)
+     
+     //配列memosに合わせてブラウザを更新
+     //1．memoContainerを空にする
+     memoContainer.textContent = ""
+     //2.memosの内容をmemoContainerの最後尾に入れる
+     for (let i = 0; i < memos.length; i++) {
+          const text = memos[i]
+          const div = document.createElement("div")
+          div.textContent = text
+          memoContainer.append(div)
 
-      addbutton.onclick = function() {
-        
-        memos.push(memoInput.value)
-        localStorage.memos = JSON.stringify(memos)
-
+      }
+      
 
         console.log(memos)
       }
-    </script>
+          </script>
   
     </body>
 </html>
